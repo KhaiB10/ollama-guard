@@ -1,0 +1,16 @@
+{
+  "name": "ollama-guard",
+  "version": "1.0.0",
+  "description": "An OpenAI-compatible proxy for Ollama that honours num_ctx on /v1, rescues tool calls written as text, and flags silent prompt truncation. Plus a doctor for your setup.",
+  "type": "module",
+  "bin": { "ollama-guard": "bin/ollama-guard.js" },
+  "main": "src/server.js",
+  "exports": { ".": "./src/server.js", "./doctor": "./src/doctor.js", "./translate": "./src/translate.js", "./guard": "./src/guard.js" },
+  "files": ["bin", "src", "README.md", "LICENSE"],
+  "engines": { "node": ">=18.17" },
+  "scripts": { "test": "node --test test/*.test.js" },
+  "keywords": ["ollama", "llm", "tool-calling", "openai", "proxy", "context", "agents", "local-llm"],
+  "repository": { "type": "git", "url": "git+https://github.com/KhaiB10/ollama-guard.git" },
+  "author": "Khai Bustos",
+  "license": "MIT"
+}
